@@ -13,7 +13,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import requests
 import atexit
 
-app = Flask(__name__, static_folder='frontend/dist', static_url_path='/')
+app = Flask(__name__, static_folder='static', static_url_path='/')
+
 CORS(app, resources={r"/api/*": {"origins": ["https://portfolio-4s1j.onrender.com", "http://localhost:5173"]}})
 
 # Set up logging
