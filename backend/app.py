@@ -14,7 +14,7 @@ import requests
 import atexit
 
 app = Flask(__name__, static_folder='frontend/dist', static_url_path='/')
-CORS(app, resources={r"/api/*": {"origins": ["https://your-domain.com", "http://localhost:5173"]}})
+CORS(app, resources={r"/api/*": {"origins": ["https://portfolio-4s1j.onrender.com", "http://localhost:5173"]}})
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 EMAIL_ADDRESS = os.getenv('EMAIL_ADDRESS')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
-APP_URL = os.getenv('APP_URL', 'https://your-domain.com')
+APP_URL = os.getenv('APP_URL', 'https://portfolio-4s1j.onrender.com')
 ENV = os.getenv('FLASK_ENV', 'production')
 
 # SQLite database setup
